@@ -28,9 +28,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install hashi-up
         run: |
-          echo "Downloading hashi-up..."
-          echo "Done downloading"
-          echo "Installing hashi-up..."
+          echo "Installing hashi-up with nix..."
+          nix-env -iA nixpkgs.hashi-up
           echo "Done installing"
       - name: Install consul on servers
         run: |
